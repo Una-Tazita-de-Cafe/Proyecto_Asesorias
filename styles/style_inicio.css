@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Buenard', serif;
+}
+:root{
+    --fondo:#E8F5FF;
+    --barraAside:#7F19AE;
+    --fondoTec:#DAA0FF;
+}
+h2{
+   /*  margin-top: 2.4rem; */
+    font-size: 2rem;
+    text-align: center;
+    background-color: var(--fondoTec);
+    color: white;
+    box-shadow: 5px 4px 5px rgba(20, 18, 18, 0.25);
+
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+aside{
+    background-color: var(--barraAside);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-evenly;
+}
+main{
+    background-color: var(--fondo);
+}
+
+.imgLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 3rem; */
+}
+.imgLogo img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+}
+.imgLogo figcaption{
+    
+    font-size: 1.6rem;
+    font-family: 'Aldrich', sans-serif;
+    color: white;
+}
+
+nav {
+    margin: 0 auto;
+    /* margin-top: 6rem; */
+    width: 70%;
+    border-radius: 16px;
+    border-top: 3px solid white;
+    border-bottom:3px solid white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+nav ul li:hover{
+background-color:var(--fondoTec);
+
+
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 3.5rem;
+}
+nav ul li {
+    width: 13rem;
+    height: 3.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+}
+nav ul li a{
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+}
+nav ul li a img{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 4px;
+    
+}
+.Our_Networks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    
+
+}
+.Our_Networks p{
+    color:white;
+    font-size: 1.6rem;
+
+}
+.Our_Networks img{
+    width: 25px;
+    height: 25px;
+}
+
+.Our_Networks .figimg {
+   display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem
+    ;
+}
+canvas {
+    background-color: red;
+}
+

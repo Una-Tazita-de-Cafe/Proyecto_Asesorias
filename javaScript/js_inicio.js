@@ -1,4 +1,4 @@
-const canvasLogo = document.getElementById('canLogo');
+/* const canvasLogo = document.getElementById('canLogo');
 const canvasRedes= document.getElementById('can_Network');
 
 const lienzoCL= canvasLogo.getContext("2d");
@@ -14,13 +14,21 @@ function dibujarLinea(color,Xinicial,Yinicial,Xfinal,Yfinal,lienzo){
 }
 function dibujarCirculo(color,Xinicial,Yinicial,Xfinal,Yfinal,lienzo){
 
-}
-//Linea Decorativa del titulo
-dibujarLinea('white',0,1,1,5,lienzoCL);
-dibujarCirculo();
-dibujarCirculo();
+} */
 
-//Linea Decorativa Redes
-//dibujarLinea();
-dibujarCirculo;
-dibujarCirculo();
+//Mostrar el menu
+const menuHamburger = document.getElementById("menuh");
+const btnSugerir = document.getElementById("sug");
+const menu =document.querySelector(".menu_mobile");
+const main = document.querySelector(".myMain");
+
+btnSugerir.addEventListener("click",nueva_Sugerencia);
+menuHamburger.addEventListener("click",mostrarMenu);
+function mostrarMenu(){
+     menu.classList.toggle('inactive');
+     main.classList.toggle('opacar');
+    console.log("Boton Presionado");
+}
+function nueva_Sugerencia(){
+   console.log("nuevaSugerencia");
+}

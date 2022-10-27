@@ -19,16 +19,309 @@
         </figure>
         <div class="head_botones">
            <a href="#"><img src="/images/notifi.png" alt="icono notificacion"></a>
-           <a href="#"><img src="/images/menuham.png" alt="icono menu"></a>
+           <a href="#" id="menuh"><img src="/images/menuham.png" alt="icono menu"></a>
+           <div class="menu_mobile inactive">
+            <nav >
+                <ul>
+                   <li><a href="#"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
+                   <li><a href="#"><img src="/images/asesor.png" alt="icono Asesorias"> Asesorias</a></li>
+                   <li><a href="#"><img src="/images/evalua.png" alt="icono Evaluacion"> Evaluacion</a></li>
+                   <li><a href="#"><img src="/images/estats.png" alt="icono Estadistica"> Estadistica</a></li>
+                   <li><a href="#"><img src="/images/notifi.png" alt="icono notificacion"> Avisos</a></li>
+                   <li><a href="#"><img src="/images/configu.png" alt="icono configu"> Configurar</a></li>
+                   <li><a href="#"><img src="/images/Salir.png" alt="icono salir"> Salir</a></li>
+                </ul>
+            </nav>
         </div>
+        
+        </div>
+        
     </header>
-    <main>
-        <section>
-            <div>
+    <main class="myMain">
+        <section class="Sugerir">
+            <div class="encabezado">
                 <p>Sugerencias</p>
-                <button>Sugerir</button>
+                <button id="sug">Sugerir</button>
+                <div class="formu_sugerencia">
+                    <p>Redacta tu sugerencia</p>
+                    <form action="">
+                        <input type="text" placeholder="Ingresa Sugerencia">
+                        <input type="button" value="Enviar">
+                        <input type="button" value="Cancelar">
+                    </form>
+                    <p>Recuerda ser respetuoso o tu comentario sera eliminado</p>
+                </div>
+            </div>
+            
+            <article>
+                <p>Diego Manzo</p>
+                <div class="cuerpo">
+                    <div class="msj">
+                        <img src="/images/avatar.png" alt="icono usuario">
+                        <p>Hola, Me gustaria una asesoria sobre POO
+                            donde expliquen sus principales conceptos</p>
+                    </div>
+                    <div>
+                        <label for="chLike">
+                            <img src="/images/like.png" alt="iconoLike">
+                            <input type="checkbox" id="chLike" hidden >
+                        </label>
+                        
+                        <p>32</p>
+                    </div>
+                </div>
+                
+               
+            </article>
+            <article>
+                <p>Jesus Morgado</p>
+                <div class="cuerpo">
+                    <div class="msj">
+                        <img src="/images/avatar.png" alt="icono usuario">
+                        <p>Hola, a nuestro grupo nos interesa una asesoria en calculo vectorial</p>
+                    </div>
+                    <div>
+                        <label for="chLike">
+                            <img src="/images/like.png" alt="iconoLike">
+                            <input type="checkbox" id="chLike" hidden >
+                        </label>
+                        
+                        <p>32</p>
+                    </div>
+                </div>
+                
+               
+            </article>
+            <article>
+                <p>Carlos Mendoza</p>
+                <div class="cuerpo">
+                    <div class="msj">
+                        <img src="/images/avatar.png" alt="icono usuario">
+                        <p>Hola ¿Hay posibilidad de una asesoria para lenguajes y automatas</p>
+                    </div>
+                    <div>
+                        <label for="chLike">
+                            <img src="/images/like.png" alt="iconoLike">
+                            <input type="checkbox" id="chLike" hidden >
+                        </label>
+                        
+                        <p>32</p>
+                    </div>
+                </div>
+                
+               
+            </article>
+
+            <article>
+                <p>Carlos Bautista</p>
+                <div class="cuerpo">
+                    <div class="msj">
+                        <img src="/images/avatar.png" alt="icono usuario">
+                        <p>Hola, es posible que se abra una asesoria en lenguajes y automatas 2</p>
+                    </div>
+                    <div>
+                        <label for="chLike">
+                            <img src="/images/like.png" alt="iconoLike">
+                            <input type="checkbox" id="chLike" hidden >
+                        </label>
+                        
+                        <p>32</p>
+                    </div>
+                </div>
+                
+               
+            </article>
+   
+        </section>
+        <section class="form_busqueda">
+            <form action="" class="">
+                <input type="search" placeholder="Nombre Asesoria">
+                <input type="button" value="buscar">
+            </form>
+        </section>
+        <section class="zona_tarjetas">
+            <p class="separador">Novedades</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
+            </div>
+            <p class="separador">Programacion</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
+            </div>
+            <p class="separador">Ciencias</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
             </div>
         </section>
+        
     </main>
     <footer>
        <div class="redes">
@@ -51,4 +344,5 @@
     </div>
     </footer>
 </body>
+<script src="/javaScript/js_inicio.js"></script>
 </html>

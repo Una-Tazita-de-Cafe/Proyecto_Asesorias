@@ -14,6 +14,8 @@ html{
     --blueComments: #0094FF;
     --morado1:#9F1FF0;
     --morado2:#8539B6;
+    --cardborder:#652384;
+    --sombra: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 header{
 width: 100%;
@@ -69,6 +71,7 @@ header .logoHalcon img{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
     
 }
 .head_botones a:nth-child(1) img{
@@ -83,20 +86,358 @@ header .logoHalcon img{
     cursor: pointer;
     
 }
+.menu_mobile{
+    
+    position: absolute;
+    top: 55px;
+    background-color: var(--barraAside);
+    width: 130px;
+    height: 87.6vh;
+    display: flex;
+    flex-direction: column;
+   justify-content:flex-start;
+   border-radius: 5px;
+   z-index: 1;
+   
+}
+.inactive{
+    display: none;
+}
+.opacar{
+    opacity: 0.5;
+}
+nav {
+    margin: 0 auto;
+    /* margin-top: 6rem; */
+    width: 90%;
+    border-radius: 16px;
+    margin-top: 10px;
+  
+
+}
+nav ul li:hover{
+background-color:var(--fondoTec);
+
+
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 2.5rem;
+}
+nav ul li {
+    width: 12rem;
+    height: 3rem;
+    
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+}
+nav ul li a{
+    color: white;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-align: center;
+}
+nav ul li a img{
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 4px;
+    
+}
 /*Estilos del Main--------------------------*/
+
 main{
     width: 100%;
     height: 88vh;
     background-color: var(--fondo);
+    display: grid;
+    grid-template-rows: 2fr 0.3fr 3fr;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+
+    
 }
+/*Estilos Sugerencias ---------------------------------------------*/
+.Sugerir{
+    border: 1px solid black;
+    width: 95%;
+    height: 80%;
+    border-radius: 5px;
+    border: 1px solid var(--barraAside);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scroll-snap-type:  y proximity;
+    position: relative;
+}
+.Sugerir .encabezado{
+    background-color: var(--blueComments);
+    width: 94.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3vh;
+    border-radius: 2px;
+    position: fixed;
+    
+}
+.formu_sugerencia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: var(--sombra);
+    display: none;
+}
+.Sugerir .encabezado .formu_sugerencia p{
+    font-size: 1.6rem;
+    color: black;
+}
+.formu_sugerencia input[type="text"]{
+   width: 90%;
+   height: 32px;
+   border-radius: 8px;
+}
+.formu_sugerencia input[type="button"]{
+    color: black;
+    font-size: 1.6rem;
+}
+.formu_sugerencia input:nth-child(2){
+    background-color: green;
+}
+.formu_sugerencia input:nth-child(3){
+    background-color: red;
+}
+.Sugerir .encabezado p{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    
+}
+.Sugerir .encabezado button{
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    width: 5.5rem;
+    height: 1.8rem;
+    background-color: var(--morado2);
+    border-radius: 2px;
+    border: 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 5px;
+}
+.Sugerir article{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    align-items: center;
+    margin-top: 10px;
+    gap: 0.8rem;
+}
+.Sugerir article p:nth-child(1){
+    color: var(--blueComments);
+    font-weight: 600;
+}
+.Sugerir div:nth-child(2) .msj{
+    
+display: flex;
+width: 80%;
+align-items: center;
+
+}
+.Sugerir div:nth-child(2) .msj img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.Sugerir .cuerpo{
+    display: flex;
+    border-bottom: 1px solid var(--cardborder);
+    border-radius: 5px;
+    width: 95%;
+
+}
+.Sugerir .cuerpo div:nth-child(1){
+width: 90%;
+}
+.Sugerir .cuerpo div:nth-child(2){
+    display: flex;
+    width: 20%;
+   align-items: center;
+   justify-content: space-around;
+   
+
+}
+.Sugerir .cuerpo div:nth-child(2) img{
+    
+    width: 20px;
+    height: 20px;
+}
+.Sugerir .cuerpo div:nth-child(2) p{
+    width: 1.8rem;
+    height: 1.8rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--blueComments);
+    border: 1px solid var(--blueComments);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    padding-top: 1px;
+}
+
+/*Estilos buscador ---------------------------------------------------*/
+.form_busqueda form {
+    display: flex;
+}
+.form_busqueda input[type="search"]{
+  width: 32rem;
+  height: 2.8rem;
+  margin-right: 5px;
+}
+
+.form_busqueda input[type="button"]{
+    background-color: var(--blueComments);
+    color: white;
+    height: 24px;
+    width: 55px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: var(--sombra);
+}
+/*Estilos Tarjetas ---------------------------------------------------*/
+
+ .multi_cards{
+   
+    display: flex;
+    align-content: center;
+    gap: 20px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:  x proximity;
+    
+}
+.zona_tarjetas{
+    scroll-snap-align: center;
+    width: 100%;
+}
+.zona_tarjetas .separador{
+    background-color: var(--morado1);
+    display: inline-block;
+    width: 30%;
+    height: 25px;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    box-shadow: var(--sombra);
+    border: 2px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.zona_tarjetas .one_card{
+width: 170px;
+background-color: white;
+height: 160px;
+border-radius: 10px;
+border: 1px solid var(--cardborder);
+box-shadow: var(--sombra);
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+.zona_tarjetas .one_card img{
+width: 20px;
+height: 20px;
+border-radius: 20px;
+border: 1px solid var(--morado2);
+
+}
+.zona_tarjetas .one_card figure img{
+    border:  none;
+    width: 16px;
+    height: 16px;
+}
+.zona_tarjetas .one_card .titulo_asesoria{
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+}
+.zona_tarjetas .one_card .titulo_asesoria p{
+    font-size: 1.1rem;
+    font-weight: bolder;
+    border-top: 1px solid var(--morado2);
+    border-bottom: 1px solid var(--morado2);
+    border-right: 1px solid var(--morado2);
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+}
+.zona_tarjetas .one_card .datos_asesoria,.hora_asesoria{
+    font-size: 1.2rem;
+}
+.zona_tarjetas .one_card .datos_asesoria{
+    margin: 0 auto;
+}
+.zona_tarjetas .one_card .datos_asesoria p{
+    margin-bottom: 2px;
+}
+.zona_tarjetas .one_card .datos_asesoria span{
+    color: var(--blueComments);
+    font-weight: 500;
+    
+}
+.zona_tarjetas .one_card .hora_asesoria{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    font-weight: 500;
+    justify-content: space-evenly;
+    gap: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.zona_tarjetas .one_card .hora_asesoria p{
+    width: 80px;
+    background-color: lightgray;
+    border-radius: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.zona_tarjetas .one_card .valor_prog{
+
+    display: flex;
+    justify-content: space-around;
+}
+.zona_tarjetas .one_card .valor_prog p{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--blueComments);
+}
+
 
 /*Estilos footer -----------------------------------*/
 footer{
     width: 100%;
-    height: 6vh;;
+    height: 6vh;
     background-color: var(--barraAside);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     
 }

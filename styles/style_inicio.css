@@ -15,7 +15,11 @@ html{
     --morado1:#9F1FF0;
     --morado2:#8539B6;
     --cardborder:#652384;
+    --grisSugerir:#5F5E5E;
     --sombra: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --btnAceptar:#1AA438;
+    --btnCancelar:#DD1313;
+    --avisos:#FBF0F0;
 }
 header{
 width: 100%;
@@ -186,39 +190,176 @@ main{
     position: fixed;
     
 }
+/* Estilos menu agregar sugerencias------------------------------ */
 .formu_sugerencia{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 380px;
-    height: 250px;
-    background-color: white;
+    width: 370px;
+    height: 220px;
+    background-color: var(--fondo);
     position: absolute;
-    top: 60px;
-    border-radius: 4px;
-    border: 1px solid black;
+    top: 150px;
+    left: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--blueComments);
     box-shadow: var(--sombra);
+    text-align: center;
     display: none;
+    
 }
-.Sugerir .encabezado .formu_sugerencia p{
+
+
+.Sugerir .encabezado .formu_sugerencia p:nth-child(1){
     font-size: 1.6rem;
-    color: black;
+    color: var(--cardborder);
+    margin-top: 5px;
 }
+.Sugerir .encabezado .formu_sugerencia p:nth-child(3){
+    color: var(--grisSugerir);
+    width: 65%;
+    text-decoration: underline;
+}
+
 .formu_sugerencia input[type="text"]{
-   width: 90%;
-   height: 32px;
-   border-radius: 8px;
+   width: 80%;
+   height: 75px;
+   border: 0.5px solid var(--blueComments);
+   border-radius: 4px;
+   text-align: center;
+   font-size: 1.4rem;
+   
 }
 .formu_sugerencia input[type="button"]{
-    color: black;
-    font-size: 1.6rem;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    width: 80px;
+    height: 25px;
+    border: 1px solid white;
+    box-shadow: var(--sombra);
+    margin-top: 20px;
+   
+
+
+}
+.boton{
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    width: 80px;
+    height: 25px;
+    border: 1px solid white;
+    box-shadow: var(--sombra);
+    margin-top: 20px;
 }
 .formu_sugerencia input:nth-child(2){
-    background-color: green;
+    background-color: var(--btnAceptar);
+    margin-right: 20px;
 }
 .formu_sugerencia input:nth-child(3){
-    background-color: red;
+    background-color: var(--btnCancelar)
+}
+/* Estilos menu sugerencia guardada ----------------------- */
+.conten_msj{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--fondo);
+    border-radius: 6px;
+    border: 1px solid var(--blueComments);
+    position: absolute;
+    width: 320px;
+    height: 120px;
+    top: 150px;
+    left: 20px;
+    display: none;
+   
+}
+.conten_msj .cuerpo_msj{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--avisos) ;
+    box-shadow: var(--sombra);
+    
+}
+.Sugerir .conten_msj .cuerpo_msj p{
+    font-size: 1.6rem;
+    color: black;
+}
+.conten_msj .cuerpo_msj img{
+    width: 35px;
+    height: 35px;
+}
+.conten_msj  input[type="button"]{
+    background-color: var(--btnAceptar);
+    color: white;
+    margin: 0;
+    
+
+}
+/*Menu Inscripcion Exitosa -----------------------*/
+.zona_tarjetas #inscribirme{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 80px;
+    left: 65px;
+    border-radius: 2px;
+    border: 1.5px solid var(--blueComments);
+    display: none !important;
+}
+
+.zona_tarjetas #inscribirme p{
+    font-size: 1.6rem;
+}
+
+.zona_tarjetas #inscribirme .titulo_asesoria p {
+width: 150px;
+}
+.zona_tarjetas #inscribirme .hora_asesoria p{
+    width: 110px;
+}
+.zona_tarjetas #inscribirme img{
+width: 25px;
+height: 25px;
+}
+.zona_tarjetas #inscribirme .valor_prog{
+    display: flex;
+    flex-direction: column;
+}
+.zona_tarjetas #inscribirme .valor_prog div{
+    align-self: center;
+    
+}
+.zona_tarjetas #inscribirme .valor_prog div input:nth-child(1){
+    background-color: var(--btnAceptar);
+    margin-right: 10px;
+}
+.zona_tarjetas #inscribirme .valor_prog div input:nth-child(2){
+    background-color: var(--btnCancelar);
+}
+.msj_confirm_inscript{
+    /* display: flex; */
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.msj_confirm_inscript p{
+    width: 60%;
+}
+.msj_confirm_inscript input:nth-child(2){
+    background-color: var(--btnCancelar);
+}
+.msj_inscript{
+   /*  display: flex; */
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 .Sugerir .encabezado p{
     font-size: 1.3rem;
@@ -334,6 +475,7 @@ width: 90%;
 .zona_tarjetas{
     scroll-snap-align: center;
     width: 100%;
+    position: relative;
 }
 .zona_tarjetas .separador{
     background-color: var(--morado1);

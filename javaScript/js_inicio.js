@@ -18,17 +18,25 @@ function dibujarCirculo(color,Xinicial,Yinicial,Xfinal,Yfinal,lienzo){
 
 //Mostrar el menu
 const menuHamburger = document.getElementById("menuh");
-const btnSugerir = document.getElementById("sug");
+const menuNot = document.getElementById("menunotif");
+
 const menu =document.querySelector(".menu_mobile");
+const notifi= document.querySelector(".notificaciones");
 const main = document.querySelector(".myMain");
 
-btnSugerir.addEventListener("click",nueva_Sugerencia);
+const asideM = document.querySelector("#asideMenu");
+
 menuHamburger.addEventListener("click",mostrarMenu);
+menuNot.addEventListener("click",mostrarNotificaciones);
+
+function mostrarNotificaciones(){
+    notifi.classList.toggle('inactive');
+    main.classList.toggle('opacar');
+    console.log("presionado");
+}
 function mostrarMenu(){
      menu.classList.toggle('inactive');
      main.classList.toggle('opacar');
     console.log("Boton Presionado");
 }
-function nueva_Sugerencia(){
-   console.log("nuevaSugerencia");
-}
+

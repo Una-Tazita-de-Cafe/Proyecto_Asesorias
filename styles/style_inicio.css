@@ -6,10 +6,28 @@
 html{
     font-size: 62.5%;
     font-family: 'Buenard', serif;
+    
 }
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: grid;
+    grid-template-rows: 60px 2fr 60px;
+}
+
+aside{
+    display: none;
+}
+
+
+
 :root{
     --fondo:#E8F5FF;
-    --barraAside:#7F19AE;
+   /*  --barraAside:#7F19AE; */
+   /* --barraAside: #6915C4; */
+   --barraAside: #2311C4;
     --fondoTec:#DAA0FF;
     --blueComments: #0094FF;
     --morado1:#9F1FF0;
@@ -21,12 +39,13 @@ html{
     --btnCancelar:#DD1313;
     --avisos:#FBF0F0;
 }
+
 header{
 width: 100%;
-height: 6vh;
 background-color: var(--barraAside);
 display: grid;
 grid-template-columns: 124px 1fr 0.5fr;
+height: 100%;
 
 }
 
@@ -104,6 +123,62 @@ header .logoHalcon img{
    z-index: 1;
    
 }
+.menu_mobile p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.notificaciones{
+    position: absolute;
+    top: 55px;
+    background-color: var(--barraAside);
+    width: 150px;
+    height: 87.6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  
+   border-radius: 5px;
+   z-index: 1;
+}
+
+.notificaciones div{
+    width: 96%;
+    background-color: var(--avisos);
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px ;
+    text-align: center;
+    border: 1px solid white;
+    box-shadow: var(--sombra);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.notificaciones p:nth-child(1){
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.notificaciones div img{
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+.notificaciones input{
+    align-self: flex-end;
+    width: 65px;
+    height: 22px;
+    color: whitesmoke;
+    background-color: var(--fondoTec);
+    border: 1px solid white;
+    box-shadow: var(--sombra);
+    border-radius: 3px;
+
+}
 .inactive{
     display: none;
 }
@@ -153,18 +228,16 @@ nav ul li a img{
     
 }
 /*Estilos del Main--------------------------*/
-
 main{
+    
     width: 100%;
-    height: 88vh;
     background-color: var(--fondo);
     display: grid;
-    grid-template-rows: 2fr 0.3fr 3fr;
+    grid-template-rows: .5fr 0.3fr 3fr;
     align-items: center;
     justify-items: center;
-    overflow: hidden;
 
-    
+   
 }
 /*Estilos Sugerencias ---------------------------------------------*/
 .Sugerir{
@@ -177,18 +250,17 @@ main{
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     scroll-snap-type:  y proximity;
-    position: relative;
+    
+   
 }
 .Sugerir .encabezado{
     background-color: var(--blueComments);
-    width: 94.5%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3vh;
     border-radius: 2px;
-    position: fixed;
-    
 }
 /* Estilos menu agregar sugerencias------------------------------ */
 .formu_sugerencia{
@@ -442,46 +514,65 @@ width: 90%;
 }
 
 /*Estilos buscador ---------------------------------------------------*/
+.form_busqueda{
+    width: 100%;
+   
+}
 .form_busqueda form {
     display: flex;
+    width: 100%;
+    justify-content: center;
+
+    
+    
 }
 .form_busqueda input[type="search"]{
-  width: 32rem;
-  height: 2.8rem;
-  margin-right: 5px;
+  width: 75%;
+  height: 30px;
+  margin-right: 2px;
+  border-radius: 5px;
+  border: 2px solid wheat;
+  font-size: 1.2rem;
 }
 
 .form_busqueda input[type="button"]{
     background-color: var(--blueComments);
     color: white;
-    height: 24px;
+    height: 22px;
     width: 55px;
     border: 1px solid white;
     border-radius: 4px;
     box-shadow: var(--sombra);
+    align-self: center;
 }
 /*Estilos Tarjetas ---------------------------------------------------*/
 
  .multi_cards{
-   
-    display: flex;
-    align-content: center;
-    gap: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 35px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type:  x proximity;
     
+    
 }
 .zona_tarjetas{
-    scroll-snap-align: center;
+   
     width: 100%;
-    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* display: none; */
+    
 }
 .zona_tarjetas .separador{
     background-color: var(--morado1);
     display: inline-block;
     width: 30%;
-    height: 25px;
+    height: 22px;
     text-align: center;
     color: white;
     font-size: 1.6rem;
@@ -492,7 +583,8 @@ width: 90%;
 }
 
 .zona_tarjetas .one_card{
-width: 170px;
+min-width: 170px;
+max-width: 180px;
 background-color: white;
 height: 160px;
 border-radius: 10px;
@@ -501,6 +593,9 @@ box-shadow: var(--sombra);
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+scroll-snap-align: center;
+
+
 
 }
 .zona_tarjetas .one_card img{
@@ -576,7 +671,7 @@ border: 1px solid var(--morado2);
 /*Estilos footer -----------------------------------*/
 footer{
     width: 100%;
-    height: 6vh;
+    height: 100%;
     background-color: var(--barraAside);
     display: flex;
     justify-content: space-around;
@@ -621,7 +716,154 @@ font-weight: bold;
 color: var(--blueComments);
 }
 
+@media(min-width:700px) {
+    header{
+        display: none;
+    }
+    h2{
+        /*  margin-top: 2.4rem; */
+         font-size: 2rem;
+         text-align: center;
+         background-color: var(--fondoTec);
+         color: white;
+         box-shadow: 5px 4px 5px rgba(20, 18, 18, 0.25);
+     
+     }
+     body{
+        
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows:repeat(4,1fr);
+            position: relative;
+            
+        
+     }
+
+     aside{
+         background-color: var(--barraAside);
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 0;
+        
+     }
+   
 
 
+     main{
+         background-color: var(--fondo);
+         height: 100%;
+         
+         
+     }
+     
+     .imgLogo{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         /* margin-top: 3rem; */
+     }
+     .imgLogo img{
+         width: 70px;
+         height: 70px;
+         margin-bottom: 5px;
+     }
+     .imgLogo figcaption{
+         
+         font-size: 1.6rem;
+         font-family: 'Aldrich', sans-serif;
+         color: white;
+     }
+     
+     nav {
+         margin: 0 auto;
+         /* margin-top: 6rem; */
+         width: 70%;
+         border-radius: 16px;
+         border-top: 3px solid white;
+         border-bottom:3px solid white;
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+     
+     }
+     nav ul li:hover{
+     background-color:var(--fondoTec);
+     
+     
+     }
+     nav ul{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         list-style: none;
+         gap: 3.5rem;
+     }
+     nav ul li {
+         width: 13rem;
+         height: 3.5rem;
+         border: 1px solid white;
+         border-radius: 5px;
+         text-align: center;
+     }
+     nav ul li a{
+         color: white;
+         font-size: 1.8rem;
+         text-decoration: none;
+         text-align: center;
+     }
+     nav ul li a img{
+         width: 20px;
+         height: 20px;
+         margin-top: 4px;
+         margin-right: 4px;
+         
+     }
+     .Our_Networks{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0.5rem;
+         
+     
+     }
+     .Our_Networks p{
+         color:white;
+         font-size: 1.6rem;
+     
+     }
+     .Our_Networks img{
+         width: 25px;
+         height: 25px;
+     }
+     
+     .Our_Networks .figimg {
+        display:grid;
+         grid-template-columns: repeat(4,1fr);
+         gap: 1.2rem
+         ;
+     }
+     .separador{
+        margin-left: 10px;
+     }
+     .multi_cards{
+        justify-items: center;
+       
+     }
+    footer{
+        display: none;
+    }
+
+}
 
 
+/* Estilos para tableta */
+@media(min-width:1024px){
+header{
+    display: none;
+}
+footer {
+    display: none;
+}
+
+}

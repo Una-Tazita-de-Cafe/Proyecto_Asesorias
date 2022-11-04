@@ -18,9 +18,28 @@
             <figcaption class="logoHalcon">Halcones Community</figcaption>
         </figure>
         <div class="head_botones">
-           <a href="#"><img src="/images/notifi.png" alt="icono notificacion"></a>
+           <a href="#" id="menunotif"><img src="/images/notifi.png" alt="icono notificacion"></a>
            <a href="#" id="menuh"><img src="/images/menuham.png" alt="icono menu"></a>
+           <div class="notificaciones inactive">
+                <p>Mis Notificaciones</p>
+                <div>
+                    <img src="/images/clock.png" alt="icono tiempo">
+                    <p>Tu asesoria esta por comenzar</p>
+                    <p>12:00 -- 01:00pm</p>
+                </div>
+                <div>
+                    <img src="/images/group.png" alt="icono personas">
+                    <p>Se han unido nuevos alumnos</p>
+                </div>
+                <div>
+                    <img src="/images/calendar.png" alt="icono calendario">
+                    <p>Proxima Asesoria</p>
+                    <p>Martes 12:00 -- 01:00pm</p>
+                </div>
+                <input type="button" value="Borrar">
+           </div>
            <div class="menu_mobile inactive">
+            <p>Menu Navegacion</p>
             <nav >
                 <ul>
                    <li><a href="#"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
@@ -37,6 +56,40 @@
         </div>
         
     </header>
+    
+    <aside class="" id="asideMenu">
+        <h2>Tecnologico de Jiquilpan</h3>
+    
+        <figure class="imgLogo">
+            <img src="/images/logoHalcon.png" alt="Logo Halcones Community">
+            <figcaption>Halcones Community</figcaption>
+            <canvas id="canLogo" width="200px" height="5px"></canvas>
+        </figure>
+    
+        <nav>
+            <ul>
+               <li><a href="#"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
+               <li><a href="#"><img src="/images/asesor.png" alt="icono Asesorias"> Asesorias</a></li>
+               <li><a href="#"><img src="/images/evalua.png" alt="icono Evaluacion"> Evaluacion</a></li>
+               <li><a href="#"><img src="/images/estats.png" alt="icono Estadistica"> Estadistica</a></li>
+               <li><a href="#"><img src="/images/notifi.png" alt="icono notificacion"> Avisos</a></li>
+               <li><a href="#"><img src="/images/configu.png" alt="icono configu"> Configurar</a></li>
+               <li><a href="#"><img src="/images/Salir.png" alt="icono salir"> Salir</a></li>
+            </ul>
+        </nav>
+        <div class="Our_Networks">
+            <p>Nuestras Redes</p>
+            <canvas width="150px" height="5px" id="can_Network"></canvas>
+            <figure class="figimg">
+                <a href="#"><img src="/images/facebook.png" alt="icono facebook"></a>
+                <a href="#"><img src="/images/mindBx.png" alt="icono Mindbox"></a>
+                <a href="#"><img src="/images/moodle.png" alt="icono moodle"></a>
+                <a href="#"><img src="/images/Whats.png" alt="icono whatsApp"></a>
+            </figure>
+        </div>
+    
+    </aside>
+
     <main class="myMain">
         <section class="Sugerir">
             <div class="encabezado">
@@ -147,6 +200,7 @@
                 <input type="button" value="buscar">
             </form>
         </section>
+        
         <section class="zona_tarjetas">
             <div class="one_card" id="inscribirme">
 
@@ -202,6 +256,34 @@
 
             <p class="separador">Novedades</p>
             <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
                 <div class="one_card">
 
                     <div class="titulo_asesoria">
@@ -320,8 +402,361 @@
                 </div>
                
             </div>
+            <p class="separador">Investigacion</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
+            </div>
+
             <p class="separador">Ciencias</p>
             <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
+            </div>
+
+            <p class="separador">Tecnologias</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
+            </div>
+            <p class="separador">Ciencias</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
+               
+            </div>
+            <p class="separador">Holalalal</p>
+            <div class="multi_cards">
+                <div class="one_card">
+
+                    <div class="titulo_asesoria">
+                    <img src="/images/webMateria.png" alt="icono asesoria">
+                    <p>Programacion Web</p>
+                    </div>
+
+                    <div class="datos_asesoria">
+                        <p>Profresor: <span>Leonardo Martinez</span></p>
+                        <p>Disponibles <span>completo</span></p>
+                    </div>
+
+                    <div class="hora_asesoria">
+                        <p>Lu: 10:00-11:00</p>
+                        <p>Mi: 10:00-11:00</p>
+                        <p>Ju: 10:00-11:00</p>
+                    </div>
+                 <div class="valor_prog">
+                    <figure>
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/YellowStar.png" alt="icono valoracion">
+                        <img src="/images/WhiteStar.png" alt="icono valoracion">
+                    </figure>
+                    <p>ver programa</p>
+                 </div>
+                    
+                </div>
                 <div class="one_card">
 
                     <div class="titulo_asesoria">

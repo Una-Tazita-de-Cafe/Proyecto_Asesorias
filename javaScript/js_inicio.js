@@ -26,17 +26,40 @@ const main = document.querySelector(".myMain");
 
 const asideM = document.querySelector("#asideMenu");
 
+
 menuHamburger.addEventListener("click",mostrarMenu);
 menuNot.addEventListener("click",mostrarNotificaciones);
+main.addEventListener("click",ocultarMenus);
 
 function mostrarNotificaciones(){
     notifi.classList.toggle('inactive');
     main.classList.toggle('opacar');
     console.log("presionado");
+    if(!menu.classList.contains('inactive')){
+         menu.classList.toggle('inactive');
+         main.classList.toggle('opacar');
+    }
 }
 function mostrarMenu(){
      menu.classList.toggle('inactive');
      main.classList.toggle('opacar');
     console.log("Boton Presionado");
+    if(!notifi.classList.contains('inactive')){
+         notifi.classList.toggle('inactive');
+         main.classList.toggle('opacar');
+    }
 }
+
+function ocultarMenus(){
+    if(!menu.classList.contains('inactive')){
+        menu.classList.toggle('inactive');
+         main.classList.toggle('opacar'); 
+    }
+    if(!notifi.classList.contains('inactive')){
+        notifi.classList.toggle('inactive');
+        main.classList.toggle('opacar'); 
+    }
+}
+
+
 

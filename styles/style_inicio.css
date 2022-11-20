@@ -20,14 +20,17 @@ body{
 aside{
     display: none;
 }
-
-
+.content_aside {
+    position: sticky;
+    top: 0;
+}
 
 :root{
     --fondo:#E8F5FF;
    /*  --barraAside:#7F19AE; */
    /* --barraAside: #6915C4; */
    --barraAside: #2311C4;
+   --menuMob:#5546dd;
     --fondoTec:#DAA0FF;
     --blueComments: #0094FF;
     --morado1:#9F1FF0;
@@ -111,28 +114,40 @@ header .logoHalcon img{
 }
 .menu_mobile{
     
+    
     position: absolute;
-    top: 55px;
+    top: 0px;
     background-color: var(--barraAside);
-    width: 130px;
-    height: 87.6vh;
+    width: 180px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
    justify-content:flex-start;
-   border-radius: 5px;
+   gap: 20px;
+   border-radius: 3px;
    z-index: 1;
+   box-shadow: var(--sombra);
    
 }
 .menu_mobile p{
     color: white;
+    font-weight: 600;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 30px;
     margin-bottom: 10px;
+    background-color: var(--blueComments);
+    height: 40px;
+    box-shadow: var(--sombra);
+    
+    padding: 10px;
+}
+.menu_mobile li{
+    box-shadow: var(--sombra);
 }
 .notificaciones{
     position: absolute;
-    top: 55px;
+    top: 60.5px;
     background-color: var(--barraAside);
     width: 150px;
     height: 87.6vh;
@@ -140,8 +155,7 @@ header .logoHalcon img{
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
-  
-   border-radius: 5px;
+   border-radius: 2px;
    z-index: 1;
 }
 
@@ -155,13 +169,23 @@ header .logoHalcon img{
     border: 1px solid white;
     box-shadow: var(--sombra);
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
+    box-shadow: var(--sombra);
+    border-radius: 3px;
+
 }
 .notificaciones p:nth-child(1){
     color: white;
-    font-size: 1.4rem;
-    margin-top: 15px;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--blueComments);
+    height: 35px;
+    width: 145px;
+    box-shadow: var(--sombra);
+    padding: 10px;
 }
 .notificaciones div img{
     width: 25px;
@@ -179,9 +203,7 @@ header .logoHalcon img{
     border-radius: 3px;
 
 }
-.inactive{
-    display: none;
-}
+
 .opacar{
     opacity: 0.5;
 }
@@ -233,7 +255,7 @@ main{
     width: 100%;
     background-color: var(--fondo);
     display: grid;
-    grid-template-rows: .5fr 0.3fr 3fr;
+    grid-template-rows: .6fr 2fr 1.5fr;
     align-items: center;
     justify-items: center;
 
@@ -243,7 +265,7 @@ main{
 .Sugerir{
     border: 1px solid black;
     width: 95%;
-    height: 80%;
+    height: 300px;
     border-radius: 5px;
     border: 1px solid var(--barraAside);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -268,18 +290,48 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 370px;
-    height: 220px;
+    width: 90%;
+    height: 180px;
     background-color: var(--fondo);
     position: absolute;
     top: 150px;
-    left: 8px;
+    left: 20px;
     border-radius: 6px;
     border: 1px solid var(--blueComments);
     box-shadow: var(--sombra);
     text-align: center;
-    display: none;
-    
+}
+.contG_Sugerencias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.contG_Sugerencias form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.contG_Sugerencias form input{
+    width: 75%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+.contG_Sugerencias form button{
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid var(--morado1);
+}
+.contG_Sugerencias form img{
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -290,13 +342,13 @@ main{
 }
 .Sugerir .encabezado .formu_sugerencia p:nth-child(3){
     color: var(--grisSugerir);
-    width: 65%;
+    width: 75%;
     text-decoration: underline;
 }
 
 .formu_sugerencia input[type="text"]{
    width: 80%;
-   height: 75px;
+   height: 60px;
    border: 0.5px solid var(--blueComments);
    border-radius: 4px;
    text-align: center;
@@ -305,10 +357,10 @@ main{
 }
 .formu_sugerencia input[type="button"]{
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border-radius: 4px;
-    width: 80px;
-    height: 25px;
+    width: 70px;
+    height: 22px;
     border: 1px solid white;
     box-shadow: var(--sombra);
     margin-top: 20px;
@@ -343,12 +395,10 @@ main{
     border-radius: 6px;
     border: 1px solid var(--blueComments);
     position: absolute;
-    width: 320px;
+    width: 80%;
     height: 120px;
-    top: 150px;
-    left: 20px;
-    display: none;
-   
+    top: 290px;
+    left: 30px;
 }
 .conten_msj .cuerpo_msj{
     width: 80%;
@@ -378,13 +428,13 @@ main{
 /*Menu Inscripcion Exitosa -----------------------*/
 .zona_tarjetas #inscribirme{
     position: absolute;
-    width: 250px;
-    height: 250px;
-    top: 80px;
-    left: 65px;
+    min-width: 230px;
+    height: 280px;
+    left: 85px;
     border-radius: 2px;
     border: 1.5px solid var(--blueComments);
-    display: none !important;
+    z-index: 1;
+    
 }
 
 .zona_tarjetas #inscribirme p{
@@ -515,35 +565,72 @@ width: 90%;
 
 /*Estilos buscador ---------------------------------------------------*/
 .form_busqueda{
-    width: 100%;
-   
+    width: 98.5%;
+    height: 160px;
+    /* border: 1px solid #218CD9; */
+    /* background-color: #00E1FF; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form_busqueda div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--sombra);
+    border-top: 2px solid white;
+    border-bottom: 2px solid whitesmoke;
+    border-radius: 3px;
+    width: 99.5%;
+    height: 120px;
+    
+    background-color: #167dc7dd;
+ 
+}
+.form_busqueda div img{
+    height:120px;
+    
+}
+.form_busqueda div p{
+    font-size: 1.6rem;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bolder;
 }
 .form_busqueda form {
     display: flex;
     width: 100%;
     justify-content: center;
-
+    gap: 8px;
     
     
 }
 .form_busqueda input[type="search"]{
-  width: 75%;
+  width: 85%;
   height: 30px;
   margin-right: 2px;
-  border-radius: 5px;
-  border: 2px solid wheat;
-  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid var(--blueComments);
+  font-size: 1.4rem;
+  text-align: center;
+  box-shadow: var(--sombra);
 }
 
-.form_busqueda input[type="button"]{
-    background-color: var(--blueComments);
+.form_busqueda button{
+    background-color: white;
     color: white;
-    height: 22px;
-    width: 55px;
-    border: 1px solid white;
-    border-radius: 4px;
+    height: 34px;
+    width: 34px;
+    border: 1px solid var(--blueComments);
+    border-radius: 100%;
     box-shadow: var(--sombra);
     align-self: center;
+    
+}
+.form_busqueda button img{
+    width: 20px;
+    height: 20px;
 }
 /*Estilos Tarjetas ---------------------------------------------------*/
 
@@ -557,6 +644,7 @@ width: 90%;
     scroll-snap-type:  x proximity;
     
     
+    
 }
 .zona_tarjetas{
    
@@ -565,6 +653,7 @@ width: 90%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+   
     /* display: none; */
     
 }
@@ -661,10 +750,11 @@ border: 1px solid var(--morado2);
     display: flex;
     justify-content: space-around;
 }
-.zona_tarjetas .one_card .valor_prog p{
+.zona_tarjetas .one_card .valor_prog p a{
     font-size: 1.2rem;
     font-weight: bolder;
     color: var(--blueComments);
+    text-decoration: none;
 }
 
 
@@ -715,8 +805,19 @@ font-size: 1.0rem;
 font-weight: bold;
 color: var(--blueComments);
 }
+.inactive{
+    display: none !important;
+}
 
 @media(min-width:700px) {
+    .conten_msj{
+        width: 300px;
+        left: 350px;
+        top: 400px;
+    }
+    .conten_msj .cuerpo_msj p{
+        font-size: 1.5rem;
+    }
     header{
         display: none;
     }
@@ -730,32 +831,30 @@ color: var(--blueComments);
      
      }
      body{
-        
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 0.5fr 3fr;
             grid-template-rows:repeat(4,1fr);
             position: relative;
-            
-        
      }
-
+     .content_aside{
+        /* position: sticky; */
+        /* top: 0; */
+        
+        display: grid;
+        grid-template-rows: 25px 1fr 1fr 1fr;
+        height: 100vh;
+        row-gap: 40px;
+    }
      aside{
          background-color: var(--barraAside);
-         height: 100vh;
+         width: 100%;
+         height: 100%;
          display: flex;
          flex-direction: column;
-        justify-content: space-evenly;
-        position: sticky;
-        top: 0;
-        
+    
      }
-   
-
-
      main{
          background-color: var(--fondo);
          height: 100%;
-         
-         
      }
      
      .imgLogo{
@@ -805,6 +904,7 @@ color: var(--blueComments);
          border: 1px solid white;
          border-radius: 5px;
          text-align: center;
+         box-shadow: var(--sombra);
      }
      nav ul li a{
          color: white;
@@ -850,6 +950,107 @@ color: var(--blueComments);
         justify-items: center;
        
      }
+.multi_cards{
+    overflow-x: auto;
+    
+}
+.zona_tarjetas {
+    margin-left: 8px;
+}
+.zona_tarjetas .one_card{
+    min-width: 200px;
+    max-width: 210px;
+    background-color: white;
+    height: 190px;
+    border-radius: 10px;
+    border: 1px solid var(--cardborder);
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    scroll-snap-align: center;
+    
+    
+    
+    }
+    .zona_tarjetas .one_card img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--morado2);
+    
+    }
+    .zona_tarjetas .one_card figure img{
+        border:  none;
+        width: 16px;
+        height: 16px;
+    }
+    .zona_tarjetas .one_card .titulo_asesoria{
+        display: flex;
+        align-items: center;
+        margin-left: 3px;
+    }
+    .zona_tarjetas .one_card .titulo_asesoria p{
+        font-size: 1.4rem;
+        font-weight: bolder;
+        border-top: 1px solid var(--morado2);
+        border-bottom: 1px solid var(--morado2);
+        border-right: 1px solid var(--morado2);
+        border-radius: 4px;
+        width: 160px;
+        height: 20px;
+        text-align: center;
+    }
+    .zona_tarjetas .one_card .datos_asesoria, .hora_asesoria{
+        font-size: 1.5rem;
+    }
+    .zona_tarjetas .one_card .datos_asesoria{
+        margin: 0 auto;
+    }
+    .zona_tarjetas .one_card .datos_asesoria p{
+        margin-bottom: 2px;
+    }
+    .zona_tarjetas .one_card .datos_asesoria span{
+        color: var(--blueComments);
+        font-weight: 500;
+        
+    }
+    .zona_tarjetas .one_card .hora_asesoria{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        font-weight: 500;
+        justify-content: space-evenly;
+        gap: 5px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .zona_tarjetas .one_card .hora_asesoria p{
+        width: 95px;
+        background-color: lightgray;
+        border-radius: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .zona_tarjetas .one_card .valor_prog{
+    
+        display: flex;
+        justify-content: space-around;
+    }
+    .zona_tarjetas .one_card .valor_prog p a{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: var(--blueComments);
+        text-decoration: none;
+    }
+
+    .zona_tarjetas .one_card .valor_prog img{
+        width: 18px;
+        height: 18px;
+    }
+    .zona_tarjetas #inscribirme{
+        left: 300px;
+    }
     footer{
         display: none;
     }
@@ -865,5 +1066,125 @@ header{
 footer {
     display: none;
 }
+.zona_tarjetas .separador{
+    background-color: var(--morado1);
+    display: inline-block;
+    width: 25%;
+    height: 28px;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: var(--sombra);
+    border: 2px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.zona_tarjetas {
+    margin-left: 8px;
+}
+.zona_tarjetas .one_card{
+    min-width: 260px;
+    max-width: 280px;
+    background-color: white;
+    height: 260px;
+    border-radius: 10px;
+    border: 1px solid var(--cardborder);
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    scroll-snap-align: center;
+    
+    
+    
+    }
+    .zona_tarjetas .one_card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--morado2);
+    
+    }
+    .zona_tarjetas .one_card figure img{
+        border:  none;
+        width: 16px;
+        height: 16px;
+    }
+    .zona_tarjetas .one_card .titulo_asesoria{
+        display: flex;
+        align-items: center;
+        margin-left: 3px;
+    }
+    .zona_tarjetas .one_card .titulo_asesoria p{
+        font-size: 1.8rem;
+        font-weight: bolder;
+        border-top: 1px solid var(--morado2);
+        border-bottom: 1px solid var(--morado2);
+        border-right: 1px solid var(--morado2);
+        border-radius: 4px;
+        width: 160px;
+        height: 25px;
+        text-align: center;
+    }
+    .zona_tarjetas .one_card .datos_asesoria,.hora_asesoria{
+        font-size: 1.9rem;
+    }
+    .zona_tarjetas .one_card .datos_asesoria{
+        margin: 0 auto;
+    }
+    .zona_tarjetas .one_card .datos_asesoria p{
+        margin-bottom: 2px;
+    }
+    .zona_tarjetas .one_card .datos_asesoria span{
+        color: var(--blueComments);
+        font-weight: 500;
+        
+    }
+    .zona_tarjetas .one_card .hora_asesoria{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.8rem;
+        font-weight: 500;
+        justify-content: space-evenly;
+        gap: 5px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .zona_tarjetas .one_card .hora_asesoria p{
+        width: 120px;
+        background-color: lightgray;
+        border-radius: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .zona_tarjetas .one_card .valor_prog{
+    
+        display: flex;
+        justify-content: space-around;
+    }
+    .zona_tarjetas .one_card .valor_prog p a{
+        font-size: 1.7rem;
+        font-weight: bolder;
+        color: var(--blueComments);
+        text-decoration: none;
+    }
 
+    .zona_tarjetas .one_card .valor_prog img{
+        width: 22px;
+        height: 22px;
+    }
+    .contG_Sugerencias{
+        width: 100%;
+    }
+    .zona_tarjetas #inscribirme{
+        left: 400px;
+        top: 350px;
+    }
+    .Sugerir{
+        height: 400px;
+    }
+    .Sugerir .content_article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

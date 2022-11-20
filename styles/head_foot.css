@@ -13,15 +13,19 @@ body,html{
 }
 body{
     display: grid;
-    grid-template-rows: 60px 2fr 60px;
+    grid-template-rows: 55px 2fr 55px;
 }
 aside{
     display: none;
 }
+.content_aside{
+    position: sticky;
+    top: 0;
+}
 
 :root{
     --fondo:#E8F5FF;
-    --barraAside:#7F19AE;
+    --barraAside: #2311C4;
     --fondoTec:#DAA0FF;
     --blueComments: #0094FF;
     --morado1:#9F1FF0;
@@ -106,27 +110,37 @@ header .logoHalcon img{
 .menu_mobile{
     
     position: absolute;
-    top: 55px;
+    top: 0px;
     background-color: var(--barraAside);
-    width: 130px;
-    height: 87.6vh;
+    width: 180px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
    justify-content:flex-start;
-   border-radius: 5px;
+   gap:20px;
+   border-radius: 3px;
    z-index: 1;
+   box-shadow: var(--sombra);
    
 }
 .menu_mobile p{
     color: white;
+    font-weight: 600;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 30px;
     margin-bottom: 10px;
+    background-color: var(--blueComments);
+    height: 40px;
+    box-shadow: var(--sombra);
+    padding: 10px;
+}
+.menu_mobile li{
+    box-shadow: var(--sombra);
 }
 .notificaciones{
     position: absolute;
-    top: 55px;
+    top: 60.5px;
     background-color: var(--barraAside);
     width: 150px;
     height: 87.6vh;
@@ -134,8 +148,7 @@ header .logoHalcon img{
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
-  
-   border-radius: 5px;
+   border-radius: 2px;
    z-index: 1;
 }
 
@@ -149,14 +162,24 @@ header .logoHalcon img{
     border: 1px solid white;
     box-shadow: var(--sombra);
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
+    box-shadow: var(--sombra);
+    border-radius: 3px;
 }
 .notificaciones p:nth-child(1){
     color: white;
-    font-size: 1.4rem;
-    margin-top: 15px;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--blueComments);
+    height: 35px;
+    width: 145px;
+    box-shadow: var(--sombra);
+    padding: 10px;
 }
+
 .notificaciones div img{
     width: 25px;
     height: 25px;
@@ -173,9 +196,7 @@ header .logoHalcon img{
     border-radius: 3px;
 
 }
-.inactive{
-    display: none;
-}
+
 .opacar{
     opacity: 0.5;
 }
@@ -225,12 +246,11 @@ nav ul li a img{
 /*Estilos footer -----------------------------------*/
 footer{
     width: 100%;
-    height: 6vh;
+    height: 100%;
     background-color: var(--barraAside);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 footer .redes p{
@@ -289,10 +309,22 @@ color: var(--blueComments);
      }
      aside{
          background-color: var(--barraAside);
-         height: 100vh;
          display: flex;
          flex-direction: column;
         justify-content: space-evenly;
+     }
+     .content_aside{
+        display: grid;
+        grid-template-rows: 25px 1fr 1fr 1fr;
+        height: 100vh;
+        row-gap: 40px;
+     }
+     aside{
+        background-color: var(--barraAside);
+        width: 100%;
+        height: 100vh;
+        display: flex ;
+        flex-direction: column;
      }
      main{
          background-color: var(--fondo);
@@ -346,6 +378,7 @@ color: var(--blueComments);
          border: 1px solid white;
          border-radius: 5px;
          text-align: center;
+         box-shadow: var(--sombra);
      }
      nav ul li a{
          color: white;
@@ -397,4 +430,7 @@ header{
 footer {
     display: none;
 }
+}
+.inactive{
+    display: none;
 }

@@ -296,7 +296,7 @@ color: var(--blueComments);
     }
     h2{
         /*  margin-top: 2.4rem; */
-         font-size: 2rem;
+         font-size: 1.6rem;
          text-align: center;
          background-color: var(--fondoTec);
          color: white;
@@ -305,7 +305,7 @@ color: var(--blueComments);
      }
      body{
          display: grid;
-         grid-template-columns: 1fr 6fr;
+         grid-template-columns: 180px 1fr;
      }
      aside{
          background-color: var(--barraAside);
@@ -424,6 +424,10 @@ color: var(--blueComments);
 
 /* Estilos para tableta */
 @media(min-width:1024px){
+    body{
+        display: grid;
+        grid-template-columns: 220px 1fr;
+    }
 header{
     display: none;
 }

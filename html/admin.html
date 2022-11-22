@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/head_foot.css">
+    <link rel="stylesheet" href="/styles/style_admin.css">
+    <title>AdminView</title>
+</head>
+<body>
+    <header>
+        <figure class="logoTecNM">
+            <img src="/images/logoTecNM.png" alt="Logo TecNM">
+            <figcaption>Tecnologico Jiquilpan</figcaption>
+        </figure>
+        <figure class="logoHalcon">
+            <img src="/images/logoHalcon.png" alt="Logo Halcones Community">
+            <figcaption class="logoHalcon">Halcones Community</figcaption>
+        </figure>
+        <div class="head_botones">
+           <a href="#" id="menunotif"><img src="/images/notifi.png" alt="icono notificacion"></a>
+           <a href="#" id="menuh"><img src="/images/menuham.png" alt="icono menu"></a>
+           <div class="notificaciones inactive">
+                <p>Mis Notificaciones</p>
+                <div>
+                    <img src="/images/clock.png" alt="icono tiempo">
+                    <p>Tu asesoria esta por comenzar</p>
+                    <p>12:00 -- 01:00pm</p>
+                </div>
+                <div>
+                    <img src="/images/group.png" alt="icono personas">
+                    <p>Se han unido nuevos alumnos</p>
+                </div>
+                <div>
+                    <img src="/images/calendar.png" alt="icono calendario">
+                    <p>Proxima Asesoria</p>
+                    <p>Martes 12:00 -- 01:00pm</p>
+                </div>
+                <input type="button" value="Borrar">
+           </div>
+           <div class="menu_mobile inactive">
+            <p>Menu Navegacion</p>
+            <nav >
+                <ul>
+                   <li><a href="/html/mobInicio.html"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
+                   <li><a href="/html/asesorias.html"><img src="/images/asesor.png" alt="icono Asesorias"> Asesorias</a></li>
+                   <li><a href="#"><img src="/images/evalua.png" alt="icono Evaluacion"> Evaluacion</a></li>
+                   <li><a href="#"><img src="/images/estats.png" alt="icono Estadistica"> Estadistica</a></li>
+                   <li><a href="#"><img src="/images/notifi.png" alt="icono notificacion"> Avisos</a></li>
+                   <li><a href="#"><img src="/images/configu.png" alt="icono configu"> Configurar</a></li>
+                   <li><a href="#"><img src="/images/Salir.png" alt="icono salir"> Salir</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        </div>
+
+    </header>
+    <aside id="asideMenu">
+        <div class="content_aside">
+        <h2>Tecnologico de Jiquilpan</h3>
+    
+        <figure class="imgLogo">
+            <img src="/images/logoHalcon.png" alt="Logo Halcones Community">
+            <figcaption>Halcones Community</figcaption>
+        </figure>
+    
+        <nav>
+            <ul>
+               <li><a href="/html/mobInicio.html"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
+               <li><a href="/html/asesorias.html"><img src="/images/asesor.png" alt="icono Asesorias"> Asesorias</a></li>
+               <li><a href="#"><img src="/images/evalua.png" alt="icono Evaluacion"> Evaluacion</a></li>
+               <li><a href="#"><img src="/images/estats.png" alt="icono Estadistica"> Estadistica</a></li>
+               <li><a href="#"><img src="/images/notifi.png" alt="icono notificacion"> Avisos</a></li>
+               <li><a href="#"><img src="/images/configu.png" alt="icono configu"> Configurar</a></li>
+               <li><a href="#"><img src="/images/Salir.png" alt="icono salir"> Salir</a></li>
+            </ul>
+        </nav>
+        <div class="Our_Networks">
+            <p>Nuestras Redes</p>
+            
+            <figure class="figimg">
+                <a href="#"><img src="/images/facebook.png" alt="icono facebook"></a>
+                <a href="#"><img src="/images/mindBx.png" alt="icono Mindbox"></a>
+                <a href="#"><img src="/images/moodle.png" alt="icono moodle"></a>
+                <a href="#"><img src="/images/Whats.png" alt="icono whatsApp"></a>
+            </figure>
+        </div>
+    </div>
+    </aside>
+    <main class="myMain">
+        <div class="usuario">
+            <img src="/images/hombre.png" alt="imagen usuario">
+            <div><p><span>Mi perfil</span> (Administrador)</p>
+                <p>Alfonso Perez Z.</p></div>
+        </div>
+        
+        <section class="datos">
+            <div class="Asesorias_Activas">
+                <p>Asesorias Activas</p>
+                <div>
+                    <figure>
+                        <img src="/images/webMateria.png" alt="icono estructura de datos">
+                    </figure>
+                    <p>Estructura de Datos</p>
+                    <button>Detalles</button>
+                </div>
+                <div>
+                    <figure>
+                        <img src="/images/webMateria.png" alt="Icono lenguajes y automatas">
+                    </figure>
+                    <p>Lenguajes y Automatas</p>
+                    <button>Detalles</button>
+                </div>
+                <div>
+                    <figure>
+                        <img src="/images/webMateria.png" alt="icono PrograWeb">
+                    </figure>
+                    <p>Programacion Web</p>
+                    <button>Detalles</button>
+                </div>
+            </div>
+            <div class="btnsAdmin">
+                <button ><img src="/images/plus.png" alt="nueva asesoria">Asesoria</button>
+                <button><img src="/images/darse-cuenta.png" alt="avisos">Avios</button>
+            </div>
+            <section class="modificaciones">
+                <p>Atributos Asesoria</p>
+                <form action="">
+                    <label for="txtNom">
+                        Nombre
+                        <input type="text" placeholder="Nombre Asesoria" id="txtNom">
+                    </label>
+                    <label for="txtCapacid">
+                        Capacidad
+                        <input type="number" placeholder="Numero Alumnos" id="txtCapacid">
+                    </label>
+                    <div>
+                        <p>Periodo</p>
+                        <label for="fchInicio">
+                            Inicio
+                            <input type="date"  id="fchInicio">
+                        </label>
+                        <label for="fchFin" >
+                            Fin
+                            <input type="date" id="fchFin">
+                        </label>
+                    </div>
+                    <div>
+                        <p>Horario</p>
+                        
+                    </div>
+                </form>
+            </section>
+            <div class="Mas_Sugeridos">
+                <p>Mas Votado</p>
+                <article>
+                    <p>Carlos Bautista</p>
+                    <div class="cuerpo">
+                        <div class="msj">
+                            <img src="/images/avatar.png" alt="icono usuario">
+                            <p>Hola, es posible que se abra una asesoria en lenguajes y automatas 2</p>
+                        </div>
+                        <div>
+                            <label for="chLike">
+                                <img src="/images/like.png" alt="iconoLike">
+                                <input type="checkbox" id="chLike" hidden >
+                            </label>
+                            
+                            <p>32</p>
+                        </div>
+                    </div>
+                    
+                   
+                </article>
+                <article>
+                    <p>Jesus Morgado</p>
+                    <div class="cuerpo">
+                        <div class="msj">
+                            <img src="/images/avatar.png" alt="icono usuario">
+                            <p>Hola, a nuestro grupo nos interesa una asesoria en calculo vectorial</p>
+                        </div>
+                        <div>
+                            <label for="chLike">
+                                <img src="/images/like.png" alt="iconoLike">
+                                <input type="checkbox" id="chLike" hidden >
+                            </label>
+                            
+                            <p>32</p>
+                        </div>
+                    </div>
+                    
+                   
+                </article>
+                <article>
+                    <p>Carlos Mendoza</p>
+                    <div class="cuerpo">
+                        <div class="msj">
+                            <img src="/images/avatar.png" alt="icono usuario">
+                            <p>Hola ¿Hay posibilidad de una asesoria para lenguajes y automatas</p>
+                        </div>
+                        <div>
+                            <label for="chLike">
+                                <img src="/images/like.png" alt="iconoLike">
+                                <input type="checkbox" id="chLike" hidden >
+                            </label>
+                            
+                            <p>32</p>
+                        </div>
+                    </div>
+                    
+                   
+                </article>
+    
+            </div>
+        </section>
+        
+        
+       
+    </main>
+    <footer>
+        <div class="redes">
+         
+         <figure>
+         <img src="/images/moodle.png" alt="icono moodle">
+         <img src="/images/facebook.png" alt="icono facebook">
+         <img src="/images/mindBx.png" alt="icono mindbox">
+         <img src="/images/inter.png" alt="icono webITJ">
+         </figure>
+    
+     </div>
+     <div class="contacto">
+         <p>Contactanos</p>
+         <div>
+        <p>SGAA2022@JIQUILPAN.TECNM.MX</p>
+         <img src="/images/msg.png" alt="icon msg">
+         </div>
+         
+     </div>
+     </footer>
+</body>
+<script src="/javaScript/js_inicio.js"></script>
+</html>

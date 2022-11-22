@@ -255,7 +255,7 @@ main{
     width: 100%;
     background-color: var(--fondo);
     display: grid;
-    grid-template-rows: .6fr 2fr 1.5fr;
+    grid-template-rows: .6fr 2fr 1fr;
     align-items: center;
     justify-items: center;
 
@@ -304,8 +304,10 @@ main{
 .contG_Sugerencias{
     display: flex;
     flex-direction: column;
+   
     align-items: center;
     gap: 15px;
+    align-self: flex-start;
 }
 .contG_Sugerencias form{
     width: 100%;
@@ -581,15 +583,15 @@ width: 90%;
     box-shadow: var(--sombra);
     border-top: 2px solid white;
     border-bottom: 2px solid whitesmoke;
-    border-radius: 3px;
+    border-radius: 8px;
     width: 99.5%;
     height: 120px;
     
-    background-color: #167dc7dd;
+    background-color: #51a9dcdd;
  
 }
 .form_busqueda div img{
-    height:120px;
+    width: 400px;
     
 }
 .form_busqueda div p{
@@ -642,26 +644,24 @@ width: 90%;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type:  x proximity;
-    
-    
+    height: 200px;
     
 }
 .zona_tarjetas{
-   
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    display: grid;
     overflow: hidden;
-   
+    position: relative;
     /* display: none; */
-    
 }
 .zona_tarjetas .separador{
-    background-color: var(--morado1);
+    background-color: var(--menuMob);
     display: inline-block;
-    width: 30%;
-    height: 22px;
+    width: 70%;
+    height: 24px;
     text-align: center;
     color: white;
     font-size: 1.6rem;
@@ -669,6 +669,7 @@ width: 90%;
     border: 2px solid white;
     margin-top: 10px;
     margin-bottom: 10px;
+    justify-self: center;
 }
 
 .zona_tarjetas .one_card{
@@ -833,7 +834,7 @@ color: var(--blueComments);
      body{
             grid-template-columns: 0.5fr 3fr;
             grid-template-rows:repeat(4,1fr);
-            position: relative;
+            
      }
      .content_aside{
         /* position: sticky; */
@@ -943,12 +944,15 @@ color: var(--blueComments);
          gap: 1.2rem
          ;
      }
-     .separador{
-        margin-left: 10px;
+     .zona_tarjetas .separador{
+        justify-self: center;
+        width: 50%;
+        height: 26px;
+        font-size: 2rem ;
      }
      .multi_cards{
-        justify-items: center;
-       
+        width: 100%;
+        height: 250px;
      }
 .multi_cards{
     overflow-x: auto;
@@ -1066,10 +1070,14 @@ header{
 footer {
     display: none;
 }
+.zona_tarjetas .multi_cards{
+    height: 350px;
+    justify-items: center;
+}
 .zona_tarjetas .separador{
-    background-color: var(--morado1);
+    background-color: var(--menuMob);
     display: inline-block;
-    width: 25%;
+    width: 30%;
     height: 28px;
     text-align: center;
     color: white;
@@ -1177,8 +1185,12 @@ footer {
         width: 100%;
     }
     .zona_tarjetas #inscribirme{
-        left: 400px;
-        top: 350px;
+        /* left: 400px;
+        top: 350px; */
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
     }
     .Sugerir{
         height: 400px;
@@ -1186,5 +1198,21 @@ footer {
     .Sugerir .content_article{
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .form_busqueda{
+        align-self: flex-start;
+    }
+    .form_busqueda input[type="search"]{
+        height: 40px;
+    }
+     #cont_letrero div{
+        height: 300px;
+        background-color: #8cc0e6;
+        
+    }
+    #cont_letrero div img{
+        width: 50%;
+        height: 180px;
     }
 }

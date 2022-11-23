@@ -164,5 +164,6 @@
     .grupos{
         align-items: center;
         display: flow-root;
+        position: relative;
     }
 }

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/head_foot.css">
+    <link rel="stylesheet" href="/styles/style_evaluacion.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <figure class="logoTecNM">
+            <img src="/images/logoTecNM.png" alt="Logo TecNM">
+            <figcaption>Tecnologico Jiquilpan</figcaption>
+        </figure>
+        <figure class="logoHalcon">
+            <img src="/images/logoHalcon.png" alt="Logo Halcones Community">
+            <figcaption class="logoHalcon">Halcones Community</figcaption>
+        </figure>
+        <div class="head_botones">
+           <a href="#" id="menunotif"><img src="/images/notifi.png" alt="icono notificacion"></a>
+           <a href="#" id="menuh"><img src="/images/menuham.png" alt="icono menu"></a>
+           <div class="notificaciones inactive">
+                <p>Mis Notificaciones</p>
+                <div>
+                    <img src="/images/clock.png" alt="icono tiempo">
+                    <p>Tu asesoria esta por comenzar</p>
+                    <p>12:00 -- 01:00pm</p>
+                </div>
+                <div>
+                    <img src="/images/group.png" alt="icono personas">
+                    <p>Se han unido nuevos alumnos</p>
+                </div>
+                <div>
+                    <img src="/images/calendar.png" alt="icono calendario">
+                    <p>Proxima Asesoria</p>
+                    <p>Martes 12:00 -- 01:00pm</p>
+                </div>
+                <input type="button" value="Borrar">
+           </div>
+           <div class="menu_mobile inactive">
+            <p>Menu Navegacion</p>
+            <nav >
+                <ul>
+                   <li><a href="/html/mobInicio.html"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
+                   <li><a href="/html/asesorias.html"><img src="/images/asesor.png" alt="icono Asesorias"> Asesorias</a></li>
+                   <li><a href="/html/EvaluacionFinal.html"><img src="/images/evalua.png" alt="icono Evaluacion"> Evaluacion</a></li>
+                   <li><a href="/trab_morgado/Asesorias.html"><img src="/images/estats.png" alt="icono Estadistica"> Estadistica</a></li>
+                   <li><a href="#"><img src="/images/notifi.png" alt="icono notificacion"> Avisos</a></li>
+                   <li><a href="#"><img src="/images/configu.png" alt="icono configu"> Configurar</a></li>
+                   <li><a href="/index.html"><img src="/images/Salir.png" alt="icono salir"> Salir</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        </div>
+
+    </header>
+    <aside id="asideMenu">
+        <div class="content_aside">
+        <h2>Tecnologico de Jiquilpan</h3>
+    
+        <figure class="imgLogo">
+            <img src="/images/logoHalcon.png" alt="Logo Halcones Community">
+            <figcaption>Halcones Community</figcaption>
+            <canvas id="canLogo" width="200px" height="5px"></canvas>
+        </figure>
+    
+        <nav>
+            <ul>
+               <li><a href="/html/mobInicio.html"><img src="/images/inicio.png" alt="icono inicio">Inicio</a></li>
+               <li><a href="/html/asesorias.html"><img src="/images/asesor.png" alt="icono Asesorias"> Asesorias</a></li>
+               <li><a href="/html/EvaluacionFinal.html"><img src="/images/evalua.png" alt="icono Evaluacion"> Evaluacion</a></li>
+               <li><a href="/trab_morgado/Asesorias.html"><img src="/images/estats.png" alt="icono Estadistica"> Estadistica</a></li>
+               <li><a href="#"><img src="/images/notifi.png" alt="icono notificacion"> Avisos</a></li>
+               <li><a href="#"><img src="/images/configu.png" alt="icono configu"> Configurar</a></li>
+               <li><a href="/index.html"><img src="/images/Salir.png" alt="icono salir"> Salir</a></li>
+            </ul>
+        </nav>
+        <div class="Our_Networks">
+            <p>Nuestras Redes</p>
+            <canvas width="150px" height="5px" id="can_Network"></canvas>
+            <figure class="figimg">
+                <a href="#"><img src="/images/facebook.png" alt="icono facebook"></a>
+                <a href="#"><img src="/images/mindBx.png" alt="icono Mindbox"></a>
+                <a href="#"><img src="/images/moodle.png" alt="icono moodle"></a>
+                <a href="#"><img src="/images/Whats.png" alt="icono whatsApp"></a>
+            </figure>
+        </div>
+    </div>
+    </aside>
+    <main class="myMain">
+        <div class="Mediobody" >
+            <div class="container">
+                <div class="titulo">Cuestionario acerca el desempeño de la asesoria </div>
+                <form action="#">
+                    <div class="user-details">
+                        <div class="gender-details">
+                            <input type="radio" name="grader" id="dot-1">
+                            <input type="radio" name="grader" id="dot-2">
+                            <input type="radio" name="grader" id="dot-3">
+                            <input type="radio" name="grader" id="dot-4">
+                            <span class="gender-titel">¿La asesoria se llevo a corde al horario establecido?</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot uno"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-2">
+                                    <span class="dot dos"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-3">
+                                    <span class="dot tres"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-4">
+                                    <span class="dot cuatro"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="dos" id="dot-5">
+                            <input type="radio" name="dos" id="dot-6">
+                            <input type="radio" name="dos" id="dot-7">
+                            <input type="radio" name="dos" id="dot-8">
+                            <span class="gender-titel">¿Se usaron diversas tecnicas para transmitir el conocimiento?</span>
+                            <div class="category">
+                                <label for="dot-5">
+                                    <span class="dot n5"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-6">
+                                    <span class="dot n6"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-7">
+                                    <span class="dot n7"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-8">
+                                    <span class="dot n8"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="tres" id="dot-9">
+                            <input type="radio" name="tres" id="dot-10">
+                            <input type="radio" name="tres" id="dot-11">
+                            <input type="radio" name="tres" id="dot-12">
+                            <span class="gender-titel">¿Se analizaron los temas de tu interes?</span>
+                            <div class="category">
+                                <label for="dot-9">
+                                    <span class="dot n9"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-10">
+                                    <span class="dot n10"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-11">
+                                    <span class="dot n11"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-12">
+                                    <span class="dot n12"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="cuatro" id="dot-13">
+                            <input type="radio" name="cuatro" id="dot-14">
+                            <input type="radio" name="cuatro" id="dot-15">
+                            <input type="radio" name="cuatro" id="dot-16">
+                            <span class="gender-titel">¿Se llevo un orden y estructura en cuanto a los temas presentados?</span>
+                            <div class="category">
+                                <label for="dot-13">
+                                    <span class="dot n13"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-14">
+                                    <span class="dot n14"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-15">
+                                    <span class="dot n15"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-16">
+                                    <span class="dot n16"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="cinco" id="dot-17">
+                            <input type="radio" name="cinco" id="dot-18">
+                            <input type="radio" name="cinco" id="dot-19">
+                            <input type="radio" name="cinco" id="dot-20">
+                            <span class="gender-titel">¿Fue posible clarificar tus dudas sobre las materias?</span>
+                            <div class="category">
+                                <label for="dot-17">
+                                    <span class="dot n17"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-18">
+                                    <span class="dot n18"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-19">
+                                    <span class="dot n19"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-20">
+                                    <span class="dot n20"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="seis" id="dot-21">
+                            <input type="radio" name="seis" id="dot-22">
+                            <input type="radio" name="seis" id="dot-23">
+                            <input type="radio" name="seis" id="dot-24">
+                            <span class="gender-titel">¿Notaste una mejoria en tus conocimientos durante las sesiones?</span>
+                            <div class="category">
+                                <label for="dot-21">
+                                    <span class="dot n21"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-22">
+                                    <span class="dot n22"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-23">
+                                    <span class="dot n23"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-24">
+                                    <span class="dot n24"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="ocho" id="dot-25">
+                            <input type="radio" name="ocho" id="dot-26">
+                            <input type="radio" name="ocho" id="dot-27">
+                            <input type="radio" name="ocho" id="dot-28">
+                            <span class="gender-titel">¿Las sesiones te ayudaron a mejorar tu desempeño academico?</span>
+                            <div class="category">
+                                <label for="dot-25">
+                                    <span class="dot n25"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-26">
+                                    <span class="dot n26"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-27">
+                                    <span class="dot n27"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-28">
+                                    <span class="dot n28"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="nueve" id="dot-29">
+                            <input type="radio" name="nueve" id="dot-30">
+                            <input type="radio" name="nueve" id="dot-31">
+                            <input type="radio" name="nueve" id="dot-32">
+                            <span class="gender-titel">¿Recomendarias la asesoria a otros estudiantes?</span>
+                            <div class="category">
+                                <label for="dot-29">
+                                    <span class="dot n29"></span>
+                                    <span class="gender">Siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-30">
+                                    <span class="dot n30"></span>
+                                    <span class="gender">Casi siempre</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-31">
+                                    <span class="dot n31"></span>
+                                    <span class="gender">Algunas veces</span>
+                                </label>
+                            </div>
+                            <div class="category">
+                                <label for="dot-32">
+                                    <span class="dot n32"></span>
+                                    <span class="gender">Nunca</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <span class="gender-titel">Describe brevemente tu opinion sobre la asesoria</span>
+                            <div class="category">
+                                <input type="text" name="" id="" placeholder="respuesta">
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" values="enviar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="redes">
+         <p>Nuestras Redes</p>
+         <figure>
+         <img src="/images/moodle.png" alt="icono moodle">
+         <img src="/images/facebook.png" alt="icono facebook">
+         <img src="/images/mindBx.png" alt="icono mindbox">
+         <img src="/images/inter.png" alt="icono webITJ">
+         </figure>
+    
+     </div>
+     <div class="contacto">
+         <p>Contactanos</p>
+         <div>
+        <p>SGAA2022@JIQUILPAN.TECNM.MX</p>
+         <img src="/images/msg.png" alt="icon msg">
+         </div>
+         
+     </div>
+     </footer>
+</body>
+<script src="/javaScript/js_inicio.js"></script>
+</html>
